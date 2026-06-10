@@ -1,0 +1,76 @@
+.step-header {
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: white;
+}
+
+.ig-badge {
+  background: linear-gradient(45deg, var(--ig-grad-start) 0%, var(--ig-grad-mid2) 50%, var(--ig-grad-end) 100%);
+}
+
+.instruction-card {
+  display: flex;
+  gap: var(--spacing-md);
+  position: relative;
+}
+
+.step-icon {
+  flex-shrink: 0;
+}
+
+.icon-circle {
+  background-color: var(--bg-color);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h3 {
+  margin-bottom: var(--spacing-sm);
+  font-size: 18px;
+}
+
+.step-content ul {
+  padding-left: var(--spacing-md);
+  color: var(--text-muted);
+}
+
+.step-content li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.navigation-footer {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.btn-half {
+  flex: 1;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}

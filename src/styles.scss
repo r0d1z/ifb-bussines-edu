@@ -1,0 +1,127 @@
+/* Global Variables */
+:root {
+  /* Colors */
+  --if-green: #359830;
+  --if-red: #C90C0F;
+  --meta-blue: #0668E1;
+  --meta-dark: #1C2B33;
+  --wa-green: #25D366;
+  --wa-dark-green: #075E54;
+  --ig-grad-start: #f09433;
+  --ig-grad-mid1: #e6683c;
+  --ig-grad-mid2: #dc2743;
+  --ig-grad-mid3: #cc2366;
+  --ig-grad-end: #bc1888;
+  
+  --bg-color: #F0F2F5; /* Standard Meta app background */
+  --card-bg: #FFFFFF;
+  --text-main: #1C2B33;
+  --text-muted: #505256; /* Darkened for better a11y contrast */
+  --border-color: #CED0D4;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Spacing & Layout */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --border-radius: 12px;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Accessibility Focus States */
+*:focus-visible {
+  outline: 3px solid var(--meta-blue);
+  outline-offset: 2px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--meta-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--meta-dark);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s ease;
+  width: 100%;
+  font-size: 16px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--meta-blue);
+  color: white;
+}
+
+.btn-wa {
+  background-color: var(--wa-green);
+  color: white;
+}
+
+.btn-ig {
+  background: linear-gradient(45deg, var(--ig-grad-start) 0%, var(--ig-grad-mid2) 50%, var(--ig-grad-end) 100%);
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}

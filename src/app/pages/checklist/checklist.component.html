@@ -1,0 +1,40 @@
+<div class="container fade-in">
+  
+  <div class="step-header">
+    <div class="badge" style="background-color: var(--wa-dark-green);">Plano de Ação</div>
+    <h1>Seu Checklist de Sucesso</h1>
+    <p>Marque o que você já fez. Não precisa fazer tudo hoje, seu progresso fica salvo aqui!</p>
+  </div>
+
+  <div class="card progress-card">
+    <h3>Seu Progresso: {{ progress }}%</h3>
+    <div class="progress-bar-bg" aria-hidden="true">
+      <div class="progress-bar-fill" [style.width.%]="progress"></div>
+    </div>
+    <p class="motivational-text" *ngIf="progress === 100">🎉 Parabéns! Seu negócio está pronto para decolar!</p>
+  </div>
+
+  <div class="card checklist-container">
+    <label class="check-item" *ngFor="let item of items">
+      <div class="checkbox-wrapper">
+        <input 
+          type="checkbox" 
+          [checked]="item.checked" 
+          (change)="toggleItem(item)"
+          [attr.aria-label]="item.label">
+        <span class="custom-checkbox" aria-hidden="true"></span>
+      </div>
+      <span class="check-label" [class.completed]="item.checked">{{ item.label }}</span>
+    </label>
+  </div>
+
+  <div class="text-center reset-section">
+    <button class="btn btn-outline reset-btn" (click)="clearProgress()">Recomeçar Checklist</button>
+  </div>
+
+  <div class="navigation-footer">
+    <a routerLink="/exemplos" class="btn btn-outline btn-half" aria-label="Voltar para Exemplos">⬅ Voltar</a>
+    <a routerLink="/" class="btn btn-primary btn-half" aria-label="Voltar para o Início">Ir para o Início 🏠</a>
+  </div>
+
+</div>

@@ -1,9 +1,9 @@
 /* Global Variables */
 :root {
   /* Colors */
-  --if-green: #359830;
+  --if-green: #2E7D32;
+  --if-green-dark: #1B5E20;
   --if-red: #C90C0F;
-  --meta-blue: #0668E1;
   --meta-dark: #1C2B33;
   --wa-green: #25D366;
   --wa-dark-green: #075E54;
@@ -39,7 +39,7 @@
 
 /* Accessibility Focus States */
 *:focus-visible {
-  outline: 3px solid var(--meta-blue);
+  outline: 3px solid var(--if-green);
   outline-offset: 2px;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 a {
-  color: var(--meta-blue);
+  color: var(--if-green);
   text-decoration: none;
 }
 
@@ -106,8 +106,14 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--meta-blue);
+  background: linear-gradient(135deg, var(--if-green) 0%, var(--if-green-dark) 85%, var(--if-red) 100%);
   color: white;
+  border-bottom: 3px solid var(--if-red);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--if-green-dark) 0%, var(--if-green-dark) 80%, var(--if-red) 100%);
+  opacity: 1;
 }
 
 .btn-wa {
